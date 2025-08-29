@@ -1,4 +1,27 @@
 /* App.css */
+.app {
+  min-height: 100vh;
+  background-image: url("./assets/foto inicio.png");
+  background-size: cover;   /* que ocupe todo el fondo */
+  background-position: center;
+  background-attachment: fixed; /* efecto tipo parallax */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Para que los textos no se pierdan con la imagen */
+.app section {
+  background: rgba(255, 255, 255, 0.8); /* capa semitransparente */
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
 
 * {
   box-sizing: border-box;
@@ -119,14 +142,26 @@ button:hover {
   margin: 1rem 0;
 }
 
+/*SECCION DEL TITULO ¡ESTAS INVITADO!*/
 .seccion h1 {
-  font-family: 'Rouge Script', cursive;
+  font-family: 'Parisienne', cursive;
+  font-weight: 400; /* elegante y legible */
   font-style: normal;
-  text-shadow: 0 0 2px #D4AF37, 0 0 2px #D4AF37;
-  font-size: 75px;
-  color: #4169E1;
+  text-shadow: none; /* sin colores ni brillo */
+  font-size: 50px;
+  color: #333; /* gris oscuro suave */
   margin-bottom: 0.5rem;
+  line-height: 1.2;
+  text-align: center;
 }
+
+@media (max-width: 768px) {
+  .seccion h1 {
+    font-size: 42px; /* más pequeño en pantallas móviles */
+  }
+}
+
+
 
 .seccion h2 {
   color: #D4AF37;
@@ -205,4 +240,23 @@ img {
     flex: 1;
   }
 }
+
+/*ANILLOS*/
+
+
+/*PARA DIVIDIR UNA SECCION DE OTRA Y QUE NO SE VEA TAN JUNTO TODO*/
+.seccion {
+  margin-top: 80px;   /* espacio antes de cada sección */
+  margin-bottom: 80px; /* espacio después de cada sección */
+  text-align: center;
+}
+
+.seccion h1 {
+  margin-bottom: 20px; /* espacio debajo del título */
+}
+
+.seccion p {
+  margin-bottom: 15px; /* espacio entre párrafos */
+}
+
 
