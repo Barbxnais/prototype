@@ -2,9 +2,9 @@
 .app {
   min-height: 100vh;
   background-image: url("./assets/foto inicio.png");
-  background-size: cover;   /* que ocupe todo el fondo */
+  background-size: cover; 
   background-position: center;
-  background-attachment: fixed; /* efecto tipo parallax */
+  background-attachment: fixed; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,10 +68,10 @@ section {
 
 .titulo {
   font-family: 'Rouge Script', cursive;
-  font-style: normal;
-  text-shadow: 0 0 2px #D4AF37, 0 0 2px #D4AF37;
+  font-style:normal;
+  text-shadow: 0 0 2px #8880882d, 0 0 2px #2b2a12;
   font-size: 75px;
-  color: #4169E1;
+  color: #202124;
   margin-bottom: 0.5rem;
 }
 
@@ -164,7 +164,8 @@ button:hover {
 
 
 .seccion h2 {
-  color: #D4AF37;
+  color: #00000088;
+  font-style: normal;
   margin-bottom: 1rem;
 }
 
@@ -185,10 +186,11 @@ button:hover {
 }
 
 .final {
-  background-color: #FADADD;
+  font-family: 'Parisienne';
   padding: 1rem;
   font-weight: bold;
-  color: #444;
+  font-size: 35px;
+  text-align: center;
 }
 
 img {
@@ -241,7 +243,6 @@ img {
   }
 }
 
-/*ANILLOS*/
 
 
 /*PARA DIVIDIR UNA SECCION DE OTRA Y QUE NO SE VEA TAN JUNTO TODO*/
@@ -258,5 +259,11 @@ img {
 .seccion p {
   margin-bottom: 15px; /* espacio entre párrafos */
 }
+
+
+
+
+
+
 
 

@@ -3,11 +3,30 @@ import "./App.css";
 import Contador from "./pages/Contador";
 import novios from "./assets/novios.png";
 import { motion } from "framer-motion";
+import musica from "./assets/musica.mp3";
 import ceremonia from "./assets/ceremonia.png";
 import vestimenta from "./assets/vestimenta.png";
 import festcode from "./assets/festcode.png";
 import regalos from "./assets/regalos.png";
 import confirmacion from "./assets/confirmacion.png";
+import foto1 from "./assets/foto1.jpg";
+import foto2 from "./assets/foto2.jpg";
+import foto3 from "./assets/foto3.jpg";
+import foto4 from "./assets/foto4.jpg";
+import foto7 from "./assets/foto7.jpg";
+import foto12 from "./assets/foto12.jpg";
+import foto15 from "./assets/foto15.jpg";
+import foto21 from "./assets/foto21.jpg";
+import foto18 from "./assets/foto18.jpg";
+import foto22 from "./assets/foto22.jpg";
+import foto24 from "./assets/foto24.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import decofinal from "./assets/decofinal.png"
+
 
 const codigosValidos = {
   FAM01: { nombre: "Familia Méndez De La Fuente", invitados: 3 },
@@ -71,6 +90,7 @@ function App() {
     invitacionRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+
   return (
     <div className="app">
       {!accesoPermitido ? (
@@ -93,7 +113,7 @@ function App() {
       ) : (
         <>
           <section className="verificar">
-            <h1>Hola {nombre} 👋</h1>
+            <h1>Hola {nombre}</h1>
             <p>
               Estás invitado con <strong>{invitados}</strong> personas.
             </p>
@@ -115,16 +135,20 @@ function App() {
               </div>
             </div>
 
+          <div className="seccion musica" syle={{ textAlign: "center", marginTop: "20px"}}>
+            <audio src={musica} autoPlay loop style={{ width: "300px" }} />
+          </div>
+
             <div className="seccion">
               <h1>¡Estás Invitado!</h1>
-              <h3>
+              <p>
                 Nos encantaría que seas parte de este momento tan especial para
                 nosotros.
-              </h3>
+              </p>
             </div>
 
             <div className="seccion">
-              <h2>Esto falta para nuestra boda:</h2>
+              <h1>Esto falta para nuestra boda:</h1>
               <Contador {...tiempoRestante} />
             </div>
 
@@ -147,7 +171,7 @@ function App() {
             </div>
 
             <div className="seccion lugar">
-              <h2>¿Dónde será el evento?</h2>
+              <h1>¿Dónde será el evento?</h1>
               <p><strong>Ver aquí:</strong></p>
               <div className="mapa-container">
                 <iframe
@@ -256,15 +280,62 @@ function App() {
                 Confirmar en Google Forms
               </a>
             </div>
-            
-            <div className="seccion fotos">
-              <h2>Nuestros momentos 💕</h2>
-            </div>  
 
 
+            <div className="seccion galeria">
+              <h1>Nuestros momentos</h1>
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={20}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                className="mySwiper"
+                style={{ width: "100%", maxWidth: "1000px", margin: "0 auto", height: "32rem" }} // altura fija del carrusel
+              >
+                {[
+                  foto1, foto2, foto3, foto4,
+                  foto7, foto12, foto15, foto21,
+                  foto18, foto22, foto24
+                ].map((f, i) => (
+                  <SwiperSlide key={i}>
+                    {/* contenedor que centra vertical y horizontalmente */}
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        width: "100%",
+                        height: "100%",
+                        overflow: "hidden",
+                        background: "transparent", // opcional: #f7f7f7 para ver el área
+                        borderRadius: 12,
+                      }}
+                    >
+                      <img
+                        src={f}
+                        alt={`foto ${i + 1}`}
+                        style={{
+                          maxWidth: "100%",
+                          maxHeight: "100%",
+                          objectFit: "contain", // usa "cover" si prefieres recortar y llenar
+                          display: "block",     // importante para eliminar espacios en línea
+                        }}
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
 
+   
             <div className="seccion final">
-              <p>Gracias por ser parte de este momento tan especial 💛</p>
+              <p>¡Gracias por ser parte de este momento tan especial!</p>
+              <img
+              src={decofinal}
+              alt="deco final"
+              className="mx-auto mt-4 max-w-xs opacity-90"
+              />
             </div>
           </section>
         </>
