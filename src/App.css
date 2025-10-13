@@ -1,9 +1,9 @@
 /* App.css */
 .app {
   width: 100%;
-  min-height: 100vh;
-  background-image: url("./assets/foto inicio.png");
-  background-size: cover; 
+  min-height: 80vh;
+  background-image: url("./assets/foto inicio.jpg");
+  background-size: cover; /*cover antes*/
   background-position: center;
   background-attachment: scroll; 
   display: flex;
@@ -16,7 +16,7 @@
 
 /* Para que los textos no se pierdan con la imagen */
 .app section {
-  background: rgba(255, 255, 255, 0.8); /* capa semitransparente */
+  background: rgba(255, 255, 255, 0.6); /* capa semitransparente */
   border-radius: 16px;
   padding: 20px;
   margin-bottom: 20px;
@@ -35,7 +35,7 @@ body, html {
   width: 100%;
   min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
+  background-color: hsl(0, 0%, 100%);
   color: #333;
 }
 
@@ -163,7 +163,6 @@ button:hover {
     font-size: 42px; /* más pequeño en pantallas móviles */
   }
 }
-
 
 
 .seccion h2 {

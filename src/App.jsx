@@ -20,6 +20,7 @@ import foto21 from "./assets/foto21.jpg";
 import foto18 from "./assets/foto18.jpg";
 import foto22 from "./assets/foto22.jpg";
 import foto24 from "./assets/foto24.jpg";
+import video from "./assets/video.mp4";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -116,7 +117,19 @@ function App() {
     <div className="app">
       {!accesoPermitido ? (
         <section className="login">
-          <h1 className="titulo">Liliana & Josué</h1>
+          <video 
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              width: "100%",
+              height:"auto",
+              borderRadius: "16px",
+              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)"
+            }}>
+          </video>
           <p className="subtitulo">Ingresa tu código de familia</p>
 
           <input
