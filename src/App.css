@@ -260,6 +260,30 @@ img {
   margin-bottom: 15px; /* espacio entre párrafos */
 }
 
+/*AJUSTE DE IMAGEN FINAL*/
+.final {
+  text-align: center;
+  font-family: 'Parisienne';
+  padding: 1rem 0 0 0; /* reduce el padding inferior */
+  margin-bottom: 0;
+}
+
+.final img {
+  display: block;
+  margin: 0 auto 0 auto; 
+  max-width: 565px;
+  opacity: 0.9;
+  transform: translateY(10px);
+}
+
+/*PARRAFOS*/
+.parrafo-montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font: bold;
+  font-weight: 500;
+  color: #333;
+}
 
 
 
