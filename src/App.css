@@ -1,16 +1,18 @@
 /* App.css */
 .app {
+  width: 100%;
   min-height: 100vh;
   background-image: url("./assets/foto inicio.png");
   background-size: cover; 
   background-position: center;
-  background-attachment: fixed; 
+  background-attachment: scroll; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
 }
+
 
 /* Para que los textos no se pierdan con la imagen */
 .app section {
@@ -55,7 +57,7 @@ section {
 
 .login,
 .verificar {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: #FADADD;
   display: flex;
@@ -64,6 +66,7 @@ section {
   align-items: center;
   overflow-x: hidden;
 }
+
 
 
 .titulo {
@@ -284,6 +287,18 @@ img {
   font-weight: 500;
   color: #333;
 }
+
+html, body, #root, .app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* evita el scroll horizontal */
+}
+
+img, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 

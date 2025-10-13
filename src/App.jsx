@@ -328,7 +328,7 @@ function App() {
                         alignItems: "center",
                         justifyContent: "center",
                         width: "100%",
-                        height: "100%",
+                        height: "70vh",
                         overflow: "hidden",
                         background: "transparent", // opcional: #f7f7f7 para ver el á
                         borderRadius: 12,
