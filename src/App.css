@@ -245,8 +245,6 @@ img {
   }
 }
 
-
-
 /*PARA DIVIDIR UNA SECCION DE OTRA Y QUE NO SE VEA TAN JUNTO TODO*/
 .seccion {
   margin-top: 80px;   /* espacio antes de cada sección */
@@ -273,7 +271,7 @@ img {
 .final img {
   display: block;
   margin: 0 auto 0 auto; 
-  max-width: 565px;
+  max-width: 500px;
   opacity: 0.9;
   transform: translateY(10px);
 }
@@ -283,7 +281,7 @@ img {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   font: bold;
-  font-weight: 500;
+  font-weight: 400;
   color: #333;
 }
 
@@ -297,6 +295,16 @@ img, iframe {
   max-width: 100%;
   height: auto;
 }
+
+.imagen-boda {
+  width: 100%;      
+  max-width: 500px;    
+  height: auto;       
+  display: block;
+  margin: 0 auto;    
+}
+
+
 
 
 

@@ -20,7 +20,7 @@ import foto21 from "./assets/foto21.jpg";
 import foto18 from "./assets/foto18.jpg";
 import foto22 from "./assets/foto22.jpg";
 import foto24 from "./assets/foto24.jpg";
-import video from "./assets/video.mp4";
+import nombres from "./assets/nombres.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -43,10 +43,10 @@ const codigosValidos = {
   FAM11: { nombre: "Familia Olavarría Jofré", invitados: 2},
   FAM12: { nombre: "Familia Varas Jofré", invitados: 2},
   FAM13: { nombre: "Familia Martínez Delgado", invitados: 2},
-  FAM14: { nombre: "Familia ??Treufu", invitados: 1},
+  FAM14: { nombre: "Benjamin Treufu", invitados: 1},
   FAM15: { nombre: "Familia Sotomayor", invitados: 2},
-  FAM16: { nombre: "Familia jairo y novia???", invitados: 2},
-  FAM17: { nombre: "Familia Aguilar???", invitados: 1},
+  FAM16: { nombre: "Jairo y novia + apellido???", invitados: 2},
+  FAM17: { nombre: "Matías Aguilar", invitados: 1},
   FAM18: { nombre: "Familia Bahamondes Aravena", invitados: 4},
   FAM19: { nombre: "Familia Bahamondes Ramírez", invitados: 2},
   FAM20: { nombre: "Familia Maquehue Mujica", invitados: 2},
@@ -116,22 +116,13 @@ function App() {
   return (
     <div className="app">
       {!accesoPermitido ? (
-        <section className="login">
-          <video 
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              width: "100%",
-              height:"auto",
-              borderRadius: "16px",
-              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)"
-            }}>
-          </video>
+        <section className="login-seccion">
+          <img 
+            src={nombres}
+            alt="Nombres"
+            className="imagen-boda" 
+          />
           <p className="subtitulo">Ingresa tu código de familia</p>
-
           <input
             type="text"
             value={codigo}
@@ -193,8 +184,8 @@ function App() {
                 style={{
                   display:"block",
                   margin:"20px auto",
-                  maxWidth:"600px",
-                  width:"90%",
+                  maxWidth:"1000px",
+                  width:"100%",
                   borderRadius:"20px",
                 }}
               initial={{ opacity: 0, y: 20 }}
@@ -228,8 +219,8 @@ function App() {
                 style={{
                   display: "block",
                   margin: "20px auto",
-                  maxWidth: "600px",
-                  width: "90%",
+                  maxWidth: "1000px",
+                  width: "100%",
                   borderRadius: "20px",
                 }}
               initial={{ opacity: 0, y: 20 }}
@@ -247,8 +238,8 @@ function App() {
                 style={{
                   display:"block",
                   margin:"20px auto",
-                  maxWidth:"600px",
-                  width:"90%",
+                  maxWidth:"1000px",
+                  width:"100%",
                   borderRadius:"20px"
                 }}
               initial={{ opacity: 0, y: 20 }}
@@ -266,8 +257,8 @@ function App() {
                 style={{
                   display: "block",
                   margin: "20px auto",
-                  maxWidth: "600px",
-                  width: "90%",
+                  maxWidth: "1000px",
+                  width: "100%",
                   borderRadius: "20px",
                 }}
               initial={{ opacity: 0, y: 20 }}
@@ -292,8 +283,8 @@ function App() {
                 style={{
                   display:"block",
                   margin:"20px auto",
-                  maxWidth:"600px",
-                  width:"90%",
+                  maxWidth:"1000px",
+                  width:"100%",
                   borderRadius:"20px",
                 }}                              
               initial={{ opacity: 0, y: 20 }}
@@ -343,7 +334,7 @@ function App() {
                         width: "100%",
                         height: "70vh",
                         overflow: "hidden",
-                        background: "transparent", // opcional: #f7f7f7 para ver el á
+                        background: "transparent", 
                         borderRadius: 12,
                       }}
                     >
@@ -353,8 +344,8 @@ function App() {
                         style={{
                           maxWidth: "100%",
                           maxHeight: "100%",
-                          objectFit: "contain", // usa "cover" si prefieres recortar y llenar
-                          display: "block",     // importante para eliminar espacios en línea
+                          objectFit: "contain", 
+                          display: "block",     
                         }}
                       />
                     </div>
