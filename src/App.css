@@ -274,6 +274,8 @@ img {
   max-width: 500px;
   opacity: 0.9;
   transform: translateY(10px);
+  overflow: hidden;
+
 }
 
 /*PARRAFOS*/
@@ -303,6 +305,24 @@ img, iframe {
   display: block;
   margin: 0 auto;    
 }
+
+.final {
+  text-align: center;
+}
+
+.final img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 350px;   /* Tamaño ideal para celular */
+  height: auto;
+}
+
+.seccion {
+  margin: 0;
+  padding: 0;
+}
+
 
 
 

@@ -45,13 +45,13 @@ const codigosValidos = {
   FAM13: { nombre: "Familia Martínez Delgado", invitados: 2},
   FAM14: { nombre: "Benjamin Treufu", invitados: 1},
   FAM15: { nombre: "Familia Sotomayor", invitados: 2},
-  FAM16: { nombre: "Jairo y novia + apellido???", invitados: 2},
+  FAM16: { nombre: "Jairo", invitados: 2},
   FAM17: { nombre: "Matías Aguilar", invitados: 1},
   FAM18: { nombre: "Familia Bahamondes Aravena", invitados: 4},
   FAM19: { nombre: "Familia Bahamondes Ramírez", invitados: 2},
   FAM20: { nombre: "Familia Maquehue Mujica", invitados: 2},
   FAM21: { nombre: "Familia Castro Mendiguren", invitados: 2},
-  FAM22: { nombre: "Elevyn Ruiz y Raúl ??", invitados: 2},
+  FAM22: { nombre: "Elevyn Ruiz y Raúl Neipán", invitados: 2},
   FAM23: { nombre: "Francisca Carrillo ", invitados: 1},
 };
 
@@ -70,7 +70,7 @@ function App() {
     segundos: 0,
   });
 
-  const fechaBoda = new Date("2026-01-24T17:00:00");
+  const fechaBoda = new Date("2026-01-31T18:00:00");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -358,14 +358,14 @@ function App() {
             <div className="seccion final">
               <p>¡Gracias por ser parte de este momento tan especial!</p>
               < motion.img
-              src={decofinal}
-              alt="deco final"
-              className="mx-auto max-w-xs opacity-90 block"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              viewport={{ once: true }}
-              />
+                src={decofinal}
+                alt="deco final"
+                className="imagen-final"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                viewport={{ once: true }}
+                />
             </div>
           </section>
         </>
