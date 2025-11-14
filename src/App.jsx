@@ -53,6 +53,8 @@ const codigosValidos = {
   FAM21: { nombre: "Familia Castro Mendiguren", invitados: 2},
   FAM22: { nombre: "Elevyn Ruiz y Raúl Neipán", invitados: 2},
   FAM23: { nombre: "Francisca Carrillo ", invitados: 1},
+  FAM24: { nombre: "Familia Herrera Mundaca", invitados: 4},
+  FAM25: { nombre: "Jorge Rojas y Cecilia Hidalgo", invitados: 2},
 };
 
 function App() {
